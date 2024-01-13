@@ -550,6 +550,36 @@ class HashMapExample {
         hashMap.clear();
         System.out.println("HashMap after clearing: " + hashMap);
     }
+
+    public void demonstrateHashMapIteration() {
+        // Create a HashMap
+        HashMap<String, Integer> hashMap = new HashMap<>();
+
+
+
+        // Put some key-value pairs into the HashMap
+        hashMap.put("Apple", 10);
+        hashMap.put("Orange", 15);
+        hashMap.put("Banana", 20);
+        hashMap.put("Mango", 30);
+
+        // Iterate over the HashMap using entrySet
+        System.out.println("Iterating over HashMap using entrySet:");
+        for (Map.Entry<String, Integer> entry : hashMap.entrySet()) {
+            System.out.println(entry.getKey() + ": " + entry.getValue());
+        }
+
+        // Iterate over the HashMap using keySet and forEach
+        System.out.println("Iterating over HashMap using keySet and forEach:");
+        hashMap.keySet().forEach(key -> {
+            Integer value = hashMap.get(key);
+            System.out.println(key + ": " + value);
+        });
+
+        // Iterate over the HashMap using values and forEach
+        System.out.println("Iterating over HashMap using values and forEach:");
+        hashMap.values().forEach(value -> System.out.println(value));
+    }
 }
 
 class LinkedHashMapExample {
