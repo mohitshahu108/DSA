@@ -70,6 +70,23 @@ class ArrayListExample {
 
         // Check if the ArrayList is empty after clearing
         System.out.println("Is ArrayList empty after clearing: " + fruits.isEmpty());
+
+
+        // Iterate over the ArrayList using iterator
+        java.util.Iterator<String> iterator = fruits.iterator();
+        while (iterator.hasNext()) {
+            System.out.println(iterator.next());
+        }
+
+        // Iterate over the ArrayList using simple for loop
+        for (int i = 0; i < fruits.size(); i++) {
+            System.out.println(fruits.get(i));
+        }
+
+        // Iterate over the ArrayList using Java 8 forEach and lambda expression
+        fruits.forEach((fruit) -> {
+            System.out.println(fruit);
+        });
     }
 
 }
@@ -549,6 +566,12 @@ class HashMapExample {
         // Clear the HashMap
         hashMap.clear();
         System.out.println("HashMap after clearing: " + hashMap);
+
+
+        // Example of iterating over a HashMap using forEach and lambda expression
+        hashMap.forEach((key, value) -> {
+            System.out.println(key + ": " + value);
+        });
     }
 
     public void demonstrateHashMapIteration() {
